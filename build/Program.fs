@@ -1,6 +1,8 @@
 ﻿open Fake.Core
 open Fake.DotNet
 open Fake.IO.FileSystemOperators
+open System
+
 
 
 let rootDir = __SOURCE_DIRECTORY__ </> ".."
@@ -9,6 +11,10 @@ let docsSrc = rootDir </> "docsSrc"
 let docs =  rootDir </> "docs"
 let docsPublicRoot = "https://jimmybyrd.me/fsdocsplayground/"
 let projectName = "FsDocs Playground"
+let githubProjectRootUrl = Uri("https://github.com/TheAngryByrd/fsdocsplayground/")
+
+let licenseUrl = Uri(githubProjectRootUrl, "blob/main/LICENSE.md")
+let changelogUrl = Uri(githubProjectRootUrl, "blob/main/CHANGELOG.md")
 
 let quoted s = $"\"%s{s}\""
 
@@ -23,6 +29,9 @@ let initTargets () =
         Parameters = Some [
             "root", quoted docsPublicRoot
             "fsdocs-collection-name", quoted projectName
+            "fsdocs-license-link", quoted (licenseUrl.ToString())
+            "fsdocs-release-notes-link", quoted (changelogUrl.ToString())
+            "fsdocs-repository-link", quoted(githubProjectRootUrl.ToString())
           ]
     })
   )
