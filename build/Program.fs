@@ -1,11 +1,19 @@
 ﻿open Fake.Core
 open Fake.DotNet
+open Fake.IO.Globbing.Operators
 open Fake.IO.FileSystemOperators
 open System
 
 
 
+
 let rootDir = __SOURCE_DIRECTORY__ </> ".."
+let src = rootDir </> "src"
+// please set '<FsDocsLicenseLink>' in 'Directory.Build.props'
+// please set '<FsDocsReleaseNotesLink>' in 'Directory.Build.props'
+// please set '<Version>' in 'Directory.Build.props'
+// please set '<RepositoryUrl>' in 'Directory.Build.props'
+let srcProjGlob = !! (src </> "**/*.??proj")
 
 let docsSrc = rootDir </> "docsSrc"
 let docs =  rootDir </> "docs"
@@ -26,6 +34,7 @@ let initTargets () =
         Clean = Some true
         Input = Some docsSrc
         Output = Some docs
+        // Projects = Some srcProjGlob
         Parameters = Some [
             "root", quoted docsPublicRoot
             "fsdocs-collection-name", quoted projectName

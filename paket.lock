@@ -1,4 +1,7 @@
 STORAGE: NONE
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    FSharp.Core (7.0.200) - content: none
 
 GROUP Build
 NUGET

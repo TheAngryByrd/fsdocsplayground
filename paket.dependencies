@@ -2,6 +2,7 @@ source https://api.nuget.org/v3/index.json
 
 storage: none
 
+nuget FSharp.Core content: none
 
 group Build
 source https://api.nuget.org/v3/index.json
