@@ -1,0 +1,5 @@
+group Build
+Fake.Core.Target
+Fake.DotNet.Cli
+Fake.DotNet.fsdocs
+Fake.IO.FileSystem
