@@ -8,9 +8,11 @@ let rootDir = __SOURCE_DIRECTORY__ </> ".."
 let docsSrc = rootDir </> "docsSrc"
 let docs =  rootDir </> "docs"
 let docsPublicRoot = "https://jimmybyrd.me/fsdocsplayground/"
+let projectName = "FsDocs Playground"
+
+let quoted s = $"\"%s{s}\""
 
 let initTargets () =
-  // *** Define Targets ***
   Target.create "BuildDocs" (fun _ ->
     ()
     Fsdocs.build (fun p -> {
@@ -18,8 +20,22 @@ let initTargets () =
         Clean = Some true
         Input = Some docsSrc
         Output = Some docs
-        Parameters = Some ["root", docsPublicRoot]
+        Parameters = Some [
+            "root", quoted docsPublicRoot
+            "fsdocs-collection-name", quoted projectName
+          ]
     })
+  )
+
+  Target.create "WatchDocs" (fun _ ->
+    ()
+    // Fsdocs.watch (fun p -> {
+      
+    //   p with
+    //     Input = Some docsSrc
+    //     Output = Some docs
+    //     Parameters = Some ["root", docsPublicRoot]
+    // })
   )
 
   ()
@@ -33,6 +49,5 @@ let main argv =
     |> Context.setExecutionContext
 
     initTargets ()
-    // *** Start Build ***
     Target.runOrDefault "BuildDocs"
-    0 // return an integer exit code
+    0
