@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="{{fsdocs-authors}}">
 
-    <link rel="stylesheet" id="theme_link" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css">
+    <link rel="stylesheet" id="theme_link"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{root}}img/favicon.ico">
     <link type="text/css" rel="stylesheet" href="{{root}}content/navbar-{{fsdocs-navbar-position}}.css" />
@@ -23,14 +27,16 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!-- BEGIN SEARCH BOX: this adds support for the search box -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
     <!-- END SEARCH BOX: this adds support for the search box -->
     {{fsdocs-watch-script}}
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-secondary {{fsdocs-navbar-position}}" id="fsdocs-nav">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-nav-scroll" id="navbarsExampleDefault">
@@ -38,26 +44,47 @@
             <!-- BEGIN SEARCH BOX: this adds support for the search box -->
             <div id="header">
                 <div class="searchbox" id="fsdocs-searchbox">
-                    <label for="search-by">
+                    <!-- <label for="search-by">
                         <i class="fas fa-search"></i>
-                    </label>
+                    </label> -->
                     <input data-search-input="" id="search-by" type="search" placeholder="Search..." />
-                    <span data-search-clear="">
+                    <!-- <span data-search-clear="">
                         <i class="fas fa-times"></i>
-                    </span>
+                    </span> -->
                 </div>
             </div>
 
             <!-- END SEARCH BOX: this adds support for the search box -->
             <ul class="navbar-nav">
                 {{fsdocs-list-of-documents}}
+                <li class="nav-header">API Reference</li>
                 {{fsdocs-list-of-namespaces}}
-                <li class="nav-header">Links</li>
-                <li class="nav-item" id="edit-this-page"><a class="nav-link" href="{{root}}edit/master/docsSrc/{{fsdocs-source-filename}}">Edit this page</a></li>
-                <li class="nav-item" id="fsdocs-key1"><a class="nav-link" href="{{fsdocs-key1}}">License</a></li>
-                <li class="nav-item" id="fsdocs-license-link"><a class="nav-link" href="{{fsdocs-license-link}}">License</a></li>
-                <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link" href="{{fsdocs-release-notes-link}}">CHANGELOG/Release Notes</a></li>
-                <li class="nav-item" id="fsdocs-repository-link"><a class="nav-link" href="{{fsdocs-repository-link}}"><i class="fab fa-github"></i>Source Repository</a></li>
+                <li class="nav-header">Project Resources</li>
+
+                <li class="nav-item" id="fsdocs-license-link"><a class="nav-link" href="{{fsdocs-license-link}}"><i
+                            class="fa-regular fa-id-card pr-2"></i>License</a></li>
+                <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link"
+                        href="{{fsdocs-release-notes-link}}"><i class="fa-regular fa-sticky-note pr-2"></i>CHANGELOG/Release
+                        Notes</a></li>
+                <li class="nav-item" id="fsdocs-repository-link"><a class="nav-link"
+                        href="{{fsdocs-repository-link}}"><i class="fa-brands fa-github pr-2"></i>Source Repository</a></li>
+
+
+                <li class="nav-header">Other links</li>
+                <li class="nav-item" id="fsharp-documentation"><a class="nav-link"
+                    href="https://docs.microsoft.com/en-us/dotnet/fsharp/"><i class="fa-brands fa-microsoft pr-2"></i>F# Documentation</a></li>
+                <li class="nav-item" id="fsharp-slack"><a class="nav-link"
+                    href="https://fsharp.org/guides/slack/"><i class="fa-brands fa-slack pr-2"></i>F# Slack</a></li>
+                <li class="nav-item" id="fsharp-discord"><a class="nav-link"
+                    href="https://discord.gg/R6n7c54"><i class="fa-brands fa-discord pr-2"></i>F# Discord</a></li>
+                <li class="nav-item" id="fsharp-foundation"><a class="nav-link"
+                    href="http://foundation.fsharp.org/"><img src="https://fsharp.org/img/logo/fsharp.svg" Alt="FSharp Logo" class="fsharp-footer-logo pr-2"></i>F# Software Foundation</a></li>
+                <li class="nav-header">Metadata</li>
+                <li class="nav-item" id="edit-this-page">Found an error? <a class="nav-link"
+                    href="{{fsdocs-repository-link}}edit/master/docsSrc/{{fsdocs-source-filename}}">
+                    <i class="fa-regular fa-pen-to-square pr-2"></i>Edit this page</a></li>
+                
+                
             </ul>
         </div>
     </nav>
@@ -72,11 +99,15 @@
         </div>
 
         <!-- BEGIN SEARCH BOX: this adds support for the search box -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script type="text/javascript">var fsdocs_search_baseurl = '{{root}}';</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
         <script type="text/javascript" src="{{root}}content/fsdocs-search.js"></script>
         <!-- END SEARCH BOX: this adds support for the search box -->
     </div>
