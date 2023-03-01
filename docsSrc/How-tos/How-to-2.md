@@ -1,6 +1,6 @@
 ---
 title: How To 2
-category: How Tos
+category: How To Guides
 categoryindex: 2
 index: 1
 ---
