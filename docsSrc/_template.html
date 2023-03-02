@@ -40,7 +40,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-nav-scroll" id="navbarsExampleDefault">
-            <!-- <a href="{{fsdocs-logo-link}}"><img id="fsdocs-logo" src="{{fsdocs-logo-src}}" /></a> -->
+            <a href="{{root}}"><img id="fsdocs-logo" src="{{fsdocs-logo-src}}" /></a>
             <!-- BEGIN SEARCH BOX: this adds support for the search box -->
             <div id="header">
                 <div class="searchbox" id="fsdocs-searchbox">
@@ -59,7 +59,7 @@
                 {{fsdocs-list-of-documents}}
                 {{fsdocs-list-of-namespaces}}
                 <li class="nav-header">Project Resources</li>
-
+                <li class="nav-item" id="fsdocs-license-link"><a class="nav-link" href="{{fsdocs-readme-link}}"><i class="fa-brands fa-readme pr-2"></i>Readme</a></li>
                 <li class="nav-item" id="fsdocs-license-link"><a class="nav-link" href="{{fsdocs-license-link}}"><i
                             class="fa-regular fa-id-card pr-2"></i>License</a></li>
                 <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link"
@@ -78,20 +78,19 @@
                     href="https://discord.gg/R6n7c54"><i class="fa-brands fa-discord pr-2"></i>F# Discord</a></li>
                 <li class="nav-item" id="fsharp-foundation"><a class="nav-link"
                     href="http://foundation.fsharp.org/"><img src="https://fsharp.org/img/logo/fsharp.svg" Alt="FSharp Logo" class="fsharp-footer-logo pr-2"></i>F# Software Foundation</a></li>
-                <li class="nav-header">Metadata</li>
-                <li class="nav-item" id="edit-this-page">Found an error? <a class="nav-link"
-                    href="{{fsdocs-repository-link}}edit/master/docsSrc/{{fsdocs-source-filename}}">
-                    <i class="fa-regular fa-pen-to-square pr-2"></i>Edit this page</a></li>
-                
-                
+
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="masthead">
-            <h3 class="muted"><a href="{{fsdocs-collection-name-link}}">{{fsdocs-collection-name}}</a></h3>
+            <h3 class="muted"><a href="{{root}}">{{fsdocs-collection-name}} <small class="muted">{{fsdocs-package-version}}</small></a></h3>
         </div>
         <hr />
+        <div class="container">
+            <div class="float-right" id="edit-this-page"><span><a class="nav-link"href="{{fsdocs-repository-link}}edit/master/docsSrc/{{fsdocs-source-filename}}"><i class="fa-regular fa-pen-to-square pr-2"></i>Edit this page</a></span></div>
+        </div>
+    </div>
         <div class="container" id="fsdocs-content">
             {{fsdocs-content}}
             {{fsdocs-tooltips}}
