@@ -20,27 +20,29 @@ let docs =  rootDir </> "docs"
 let docsPublicRoot = "https://jimmybyrd.me/fsdocsplayground/"
 let projectName = "FsDocs Playground"
 let githubProjectRootUrl = Uri("https://github.com/TheAngryByrd/fsdocsplayground/")
-
-let licenseUrl = Uri(githubProjectRootUrl, "blob/main/LICENSE.md")
-let changelogUrl = Uri(githubProjectRootUrl, "blob/main/CHANGELOG.md")
+let READMElink = Uri(githubProjectRootUrl, "blob/master/README.md")
 
 let quoted s = $"\"%s{s}\""
 
+let version = "0.5.3"
+
 let initTargets () =
   Target.create "BuildDocs" (fun _ ->
-    ()
+    // hack to fix projects
+    let srcProjGlob = String.Join(" ", srcProjGlob |> Seq.map quoted)
     Fsdocs.build (fun p -> {
       p with
         Clean = Some true
         Input = Some docsSrc
         Output = Some docs
-        // Projects = Some srcProjGlob
+        Projects = Some [srcProjGlob]
         Parameters = Some [
+            // https://fsprojects.github.io/FSharp.Formatting/content.html#Templates-and-Substitutions
             "root", quoted docsPublicRoot
             "fsdocs-collection-name", quoted projectName
-            "fsdocs-license-link", quoted (licenseUrl.ToString())
-            "fsdocs-release-notes-link", quoted (changelogUrl.ToString())
             "fsdocs-repository-link", quoted(githubProjectRootUrl.ToString())
+            "fsdocs-package-version", quoted version
+            "fsdocs-readme-link", quoted (READMElink.ToString())
           ]
     })
   )
