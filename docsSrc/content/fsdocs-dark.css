@@ -42,3 +42,9 @@
     --fsdocs-code-fsioutput-color: #808080;
     --fsdocs-code-tooltip-color: #d1d1d1;
 }
+
+
+.fsdocs-source-link img {
+    -webkit-filter: grayscale(100%) brightness(1) invert(1); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(1) invert(1);
+}
