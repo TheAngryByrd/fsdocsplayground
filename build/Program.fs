@@ -8,15 +8,16 @@ open System
 
 
 let rootDir = __SOURCE_DIRECTORY__ </> ".."
-let src = rootDir </> "src"
+IO.Directory.SetCurrentDirectory rootDir
+let src = "src"
 // please set '<FsDocsLicenseLink>' in 'Directory.Build.props'
 // please set '<FsDocsReleaseNotesLink>' in 'Directory.Build.props'
 // please set '<Version>' in 'Directory.Build.props'
 // please set '<RepositoryUrl>' in 'Directory.Build.props'
 let srcProjGlob = !! (src </> "**/*.??proj")
 
-let docsSrc = rootDir </> "docsSrc"
-let docs =  rootDir </> "docs"
+let docsSrc = "docsSrc"
+let docs = "docs"
 let docsPublicRoot = "https://jimmybyrd.me/fsdocsplayground/"
 let projectName = "FsDocs Playground"
 let githubProjectRootUrl = Uri("https://github.com/TheAngryByrd/fsdocsplayground/")
@@ -27,6 +28,7 @@ let quoted s = $"\"%s{s}\""
 let version = "0.5.3"
 
 let initTargets () =
+
   Target.create "BuildDocs" (fun _ ->
     // hack to fix projects
     let srcProjGlob = String.Join(" ", srcProjGlob |> Seq.map quoted)
@@ -35,7 +37,7 @@ let initTargets () =
         Clean = Some true
         Input = Some docsSrc
         Output = Some docs
-        Projects = Some [srcProjGlob]
+        // Projects = Some [srcProjGlob]
         Parameters = Some [
             // https://fsprojects.github.io/FSharp.Formatting/content.html#Templates-and-Substitutions
             "root", quoted docsPublicRoot
