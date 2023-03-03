@@ -18,7 +18,7 @@ let srcProjGlob = !! (src </> "**/*.??proj")
 
 let docsSrc = "docsSrc"
 let docs = "docs"
-let docsPublicRoot = "https://jimmybyrd.me/fsdocsplayground/"
+let docsPublicRoot = "https://www.jimmybyrd.me/fsdocsplayground/"
 let projectName = "FsDocs Playground"
 let githubProjectRootUrl = Uri("https://github.com/TheAngryByrd/fsdocsplayground/")
 let READMElink = Uri(githubProjectRootUrl, "blob/master/README.md")
@@ -28,6 +28,8 @@ let quoted s = $"\"%s{s}\""
 let version = "0.5.3"
 
 let initTargets () =
+
+
 
   Target.create "BuildDocs" (fun _ ->
     // hack to fix projects
