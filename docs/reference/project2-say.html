@@ -93,6 +93,7 @@
   </a>
   <ul class="dropdown-menu" aria-labelledby="other-links">
     <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-1.html">Tutorial 1</a></li>
+<li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-3.html">A Literate Script</a></li>
 <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-2.html">Tutorial 2</a></li>
   </ul>
 </li>
@@ -104,15 +105,6 @@
   <ul class="dropdown-menu" aria-labelledby="other-links">
     <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/How-To-Guides/How-to-1.html">How To 1</a></li>
 <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/How-To-Guides/How-to-2.html">How To 2</a></li>
-  </ul>
-</li>
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="other-links" role="button" data-bs-toggle="dropdown"
-    aria-expanded="false">
-    Examples
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="other-links">
-    <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-3.html">A Literate Script</a></li>
   </ul>
 </li>
 <li class="nav-item dropdown">
@@ -181,7 +173,7 @@
                         class="muted">0.5.3</small></a></h3>
         </div>
         <div class="float-right" id="edit-this-page"><span><a class="nav-link"
-                    href="https://github.com/TheAngryByrd/fsdocsplayground/edit/master/docsSrc/{{fsdocs-source-filename}}"><i
+                    href="https://github.com/TheAngryByrd/fsdocsplayground/edit/master/{{fsdocs-page-source}}"><i
                         class="fa-regular fa-pen-to-square pe-2"></i>Edit this page</a></span></div>
         <hr />
     </div>
@@ -198,7 +190,7 @@
       </a>
     </dt>
     <dt>
-      Assembly: Project2.dll
+      Assembly: Project23.dll
     </dt>
   </dl>
   <div class="fsdocs-xmldoc">
@@ -214,17 +206,22 @@
   <ul>
     <li>
       <a href="#section0">
-        Goodbye
+        Other module members
       </a>
     </li>
     <li>
       <a href="#section1">
+        Goodbye
+      </a>
+    </li>
+    <li>
+      <a href="#section2">
         Hello Names
       </a>
     </li>
   </ul>
   <h2 id="section0">
-    Goodbye
+    Other module members
   </h2>
   <div>
     <h3>
@@ -247,6 +244,114 @@
             <div>
               <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
                 <p>
+                  <a id="hello3">
+                    <a href="#hello3">
+                      <code><span>hello3&#32;<span>foo</span></span></code>
+                    </a>
+                  </a>
+                </p>
+              </code>
+              <div class="fsdocs-tip" id="2">
+                <div class="member-tooltip">
+                  Full Usage: 
+                  <code><span>hello3&#32;<span>foo</span></span></code>
+                  <br/>
+                  <br/>
+                  Parameters: 
+                  <ul>
+                    <span>
+                      <b>
+                        foo
+                      </b>
+                      :
+                      <code><a href="https://www.jimmybyrd.me/fsdocsplayground/reference/project1-say-foo.html">Foo</a></code>
+                    </span>
+                    <br/>
+                  </ul>
+                  <br/>
+                  <span>
+                    Returns: 
+                    <code><span><a href="https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1">Async</a>&lt;unit&gt;</span></code>
+                  </span>
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="fsdocs-member-xmldoc">
+            <div class="fsdocs-summary">
+              <div class="fsdocs-source-link" title="Copy signature (Markdown)" onclick="Clipboard_CopyTo('`cref:M:Project2.Say.hello3`')">
+                <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/copy-md.png" class="normal"/>
+                <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/copy-md-hover.png" class="hover"/>
+              </div>
+              <div class="fsdocs-source-link" title="Copy signature (XML)" onclick="Clipboard_CopyTo('<see cref=\'M:Project2.Say.hello3\'/>')">
+                <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/copy-xml.png" class="normal"/>
+                <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/copy-xml-hover.png" class="hover"/>
+              </div>
+              <a href="https://github.com/TheAngryByrd/fsdocsplayground/tree/master/src/Project2/Library.fs#L35-35" class="fsdocs-source-link" title="Source on GitHub">
+                <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/github.png" class="normal"/>
+                <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/github-hover.png" class="hover"/>
+              </a>
+              <p class="fsdocs-summary">
+                
+              </p>
+            </div>
+            <dl class="fsdocs-params">
+              <dt class="fsdocs-param">
+                <span class="fsdocs-param-name">
+                  foo
+                </span>
+                :
+                <code><a href="https://www.jimmybyrd.me/fsdocsplayground/reference/project1-say-foo.html">Foo</a></code>
+              </dt>
+              <dd class="fsdocs-param-docs"></dd>
+            </dl>
+            <dl class="fsdocs-returns">
+              <dt>
+                <span class="fsdocs-return-name">
+                  Returns: 
+                </span>
+                <code><span><a href="https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1">Async</a>&lt;unit&gt;</span></code>
+              </dt>
+              <dd class="fsdocs-return-docs"></dd>
+            </dl>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <h2 id="section1">
+    Goodbye
+  </h2>
+  <div>
+    <h3>
+      Functions and values
+    </h3>
+    <table class="table outer-list fsdocs-member-list">
+      <thead>
+        <tr>
+          <td class="fsdocs-member-list-header">
+            Function or value
+          </td>
+          <td class="fsdocs-member-list-header">
+            Description
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fsdocs-member-usage">
+            <div>
+              <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+                <p>
                   <a id="goodbye">
                     <a href="#goodbye">
                       <code><span>goodbye&#32;<span>name</span></span></code>
@@ -254,7 +359,7 @@
                   </a>
                 </p>
               </code>
-              <div class="fsdocs-tip" id="2">
+              <div class="fsdocs-tip" id="3">
                 <div class="member-tooltip">
                   Full Usage: 
                   <code><span>goodbye&#32;<span>name</span></span></code>
@@ -288,7 +393,7 @@
                 <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/copy-xml.png" class="normal"/>
                 <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/copy-xml-hover.png" class="hover"/>
               </div>
-              <a href="https://github.com/TheAngryByrd/fsdocsplayground/tree/master/src/Project2/Library.fs#L49-49" class="fsdocs-source-link" title="Source on GitHub">
+              <a href="https://github.com/TheAngryByrd/fsdocsplayground/tree/master/src/Project2/Library.fs#L53-53" class="fsdocs-source-link" title="Source on GitHub">
                 <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/github.png" class="normal"/>
                 <img src="https://www.jimmybyrd.me/fsdocsplayground/content/img/github-hover.png" class="hover"/>
               </a>
@@ -336,7 +441,7 @@
   <div></div>
   <div></div>
   <div></div>
-  <h2 id="section1">
+  <h2 id="section2">
     Hello Names
   </h2>
   <div>
@@ -358,7 +463,7 @@
         <tr>
           <td class="fsdocs-member-usage">
             <div>
-              <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+              <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
                 <p>
                   <a id="hello">
                     <a href="#hello">
@@ -367,7 +472,7 @@
                   </a>
                 </p>
               </code>
-              <div class="fsdocs-tip" id="3">
+              <div class="fsdocs-tip" id="4">
                 <div class="member-tooltip">
                   Full Usage: 
                   <code><span>hello&#32;<span>name</span></span></code>
@@ -443,7 +548,7 @@
         <tr>
           <td class="fsdocs-member-usage">
             <div>
-              <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+              <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
                 <p>
                   <a id="hello2">
                     <a href="#hello2">
@@ -452,7 +557,7 @@
                   </a>
                 </p>
               </code>
-              <div class="fsdocs-tip" id="4">
+              <div class="fsdocs-tip" id="5">
                 <div class="member-tooltip">
                   Full Usage: 
                   <code><span>hello2&#32;<span>foo</span></span></code>

@@ -2,5 +2,4 @@ group Build
 FSharp.Core
 Fake.Core.Target
 Fake.DotNet.Cli
-Fake.DotNet.fsdocs
 Fake.IO.FileSystem

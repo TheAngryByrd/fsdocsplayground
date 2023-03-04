@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A93F81EF-55C
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Project1", "src\Project1\Project1.fsproj", "{C2E61A50-9032-43D8-B408-5C9DBF81F5B8}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Project2", "src\Project2\Project2.fsproj", "{55E6FA84-AA1D-4B2C-85C2-03708D9A7CC5}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Project23", "src\Project2\Project23.fsproj", "{55E6FA84-AA1D-4B2C-85C2-03708D9A7CC5}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "build", "build\build.fsproj", "{EBE79FCB-F912-4C2B-9DCB-32B53B0EEEB1}"
 EndProject

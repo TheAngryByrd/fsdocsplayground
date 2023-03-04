@@ -1,5 +1,8 @@
 {
     "search.exclude": {
         "docs/": true
-    }
+    },
+    // "FSharp.fsiExtraParameters": [
+    //     "--compilertool:C:/Users/jimmy/.nuget/packages/depman-fsproj/0.2.4/tools/net6.0/any"
+    // ]
 }

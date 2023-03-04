@@ -93,6 +93,7 @@
   </a>
   <ul class="dropdown-menu" aria-labelledby="other-links">
     <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-1.html">Tutorial 1</a></li>
+<li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-3.html">A Literate Script</a></li>
 <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-2.html">Tutorial 2</a></li>
   </ul>
 </li>
@@ -104,15 +105,6 @@
   <ul class="dropdown-menu" aria-labelledby="other-links">
     <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/How-To-Guides/How-to-1.html">How To 1</a></li>
 <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/How-To-Guides/How-to-2.html">How To 2</a></li>
-  </ul>
-</li>
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="other-links" role="button" data-bs-toggle="dropdown"
-    aria-expanded="false">
-    Examples
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="other-links">
-    <li><a class="dropdown-item" href="https://www.jimmybyrd.me/fsdocsplayground/Tutorials/Tutorial-3.html">A Literate Script</a></li>
   </ul>
 </li>
 <li class="nav-item dropdown">
@@ -181,36 +173,76 @@
                         class="muted">0.5.3</small></a></h3>
         </div>
         <div class="float-right" id="edit-this-page"><span><a class="nav-link"
-                    href="https://github.com/TheAngryByrd/fsdocsplayground/edit/master/docsSrc/Tutorials/Tutorial-3.fsx"><i
+                    href="https://github.com/TheAngryByrd/fsdocsplayground/edit/master/docsSrc\Tutorials\Tutorial-3.fsx"><i
                         class="fa-regular fa-pen-to-square pe-2"></i>Edit this page</a></span></div>
         <hr />
     </div>
     <div class="container" id="fsdocs-content">
         
 <h1><a name="Hello-World" class="anchor" href="#Hello-World">Hello World</a></h1>
-<pre class="fssnip highlighted"><code lang="fsharp"><span class="pp">#r</span> <span class="s">&quot;nuget: FsToolkit.Errorhandling&quot;</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="id">FsToolkit</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="id">ErrorHandling</span>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="pp">#r</span> <span class="s">&quot;nuget: Project1&quot;</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="id">Project1</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="id">System</span>
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">test</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="vt">Result</span><span class="pn">&lt;</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="rt">string</span><span class="pn">,</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="rt">string</span><span class="pn">&gt;</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="k">result</span> <span class="pn">{</span> <span class="k">return</span> <span class="s">&quot;foo&quot;</span><span class="pn">}</span>
+<span class="pp">#r</span> <span class="s">&quot;nuget: Project23&quot;</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">Project2</span>
 
-<span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="fn">printf</span> <span class="s">&quot;A result is: </span><span class="pf">%A</span><span class="s">&quot;</span> <span onmouseout="hideTip(event, 'fs3', 9)" onmouseover="showTip(event, 'fs3', 9)" class="id">test</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="id">person</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="m">Say</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="rt">Foo</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="id">Create</span> <span class="pn">(</span><span class="s">&quot;Person&quot;</span><span class="pn">,</span><span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="vt">DateTime</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs9', 9)" onmouseover="showTip(event, 'fs9', 9)" class="id">Now</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs5', 10)" onmouseover="showTip(event, 'fs5', 10)" class="m">Say</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="id">hello3</span> <span onmouseout="hideTip(event, 'fs4', 12)" onmouseover="showTip(event, 'fs4', 12)" class="id">person</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 13)" onmouseover="showTip(event, 'fs11', 13)" class="rt">Async</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 14)" onmouseover="showTip(event, 'fs12', 14)" class="id">RunSynchronously</span>
 </code></pre>
-Warning: Output, it-value and value references require --eval
+<table class="pre"><tr><td><pre><code>Hello Person</code></pre></td></tr></table>
 
-        <div class="fsdocs-tip" id="fs1">namespace FsToolkit</div>
-<div class="fsdocs-tip" id="fs2">namespace FsToolkit.ErrorHandling</div>
-<div class="fsdocs-tip" id="fs3">val test: Result&lt;string,string&gt;</div>
-<div class="fsdocs-tip" id="fs4">Multiple items<br />module Result
+        <div class="fsdocs-tip" id="fs1">namespace Project1</div>
+<div class="fsdocs-tip" id="fs2">namespace System</div>
+<div class="fsdocs-tip" id="fs3">namespace Project2</div>
+<div class="fsdocs-tip" id="fs4">val person: Say.Foo</div>
+<div class="fsdocs-tip" id="fs5">Multiple items<br />module Say
 
-from FsToolkit.ErrorHandling<br /><br />--------------------<br />module Result
+from Project2<br /><br />--------------------<br />module Say
 
-from Microsoft.FSharp.Core<br /><br />--------------------<br />[&lt;Struct&gt;]
-type Result&lt;&#39;T,&#39;TError&gt; =
-  | Ok of ResultValue: &#39;T
-  | Error of ErrorValue: &#39;TError</div>
-<div class="fsdocs-tip" id="fs5">Multiple items<br />val string: value: &#39;T -&gt; string<br /><br />--------------------<br />type string = System.String</div>
-<div class="fsdocs-tip" id="fs6">val result: ResultBuilder</div>
-<div class="fsdocs-tip" id="fs7">val printf: format: Printf.TextWriterFormat&lt;&#39;T&gt; -&gt; &#39;T</div>
+from Project1<br /><em>&lt;namespacedoc&gt;&lt;summary&gt;Contains core functionality for Project1.&lt;/summary&gt;&lt;/namespacedoc&gt;<br />&lt;summary&gt;
+ Core functionality for saying hello
+ &lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs6">type Foo =
+  {
+    Name: string
+    Date: DateTime
+  }
+  member Combined2: unit -&gt; string
+  static member Create: name: string * date: DateTime -&gt; Foo
+  member Combined: string<br /><em>&lt;summary&gt;
+ The Foo Type
+ &lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs7">static member Say.Foo.Create: name: string * date: DateTime -&gt; Say.Foo</div>
+<div class="fsdocs-tip" id="fs8">Multiple items<br />[&lt;Struct&gt;]
+type DateTime =
+  new: year: int * month: int * day: int -&gt; unit + 14 overloads
+  member Add: value: TimeSpan -&gt; DateTime
+  member AddDays: value: float -&gt; DateTime
+  member AddHours: value: float -&gt; DateTime
+  member AddMicroseconds: value: float -&gt; DateTime
+  member AddMilliseconds: value: float -&gt; DateTime
+  member AddMinutes: value: float -&gt; DateTime
+  member AddMonths: months: int -&gt; DateTime
+  member AddSeconds: value: float -&gt; DateTime
+  member AddTicks: value: int64 -&gt; DateTime
+  ...<br /><em>&lt;summary&gt;Represents an instant in time, typically expressed as a date and time of day.&lt;/summary&gt;</em><br /><br />--------------------<br />DateTime ()<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(ticks: int64) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(ticks: int64, kind: DateTimeKind) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, calendar: Globalization.Calendar) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, kind: DateTimeKind) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, calendar: Globalization.Calendar) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, kind: DateTimeKind) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em></div>
+<div class="fsdocs-tip" id="fs9">property DateTime.Now: DateTime with get<br /><em>&lt;summary&gt;Gets a &lt;see cref=&quot;T:System.DateTime&quot; /&gt; object that is set to the current date and time on this computer, expressed as the local time.&lt;/summary&gt;<br />&lt;returns&gt;An object whose value is the current local date and time.&lt;/returns&gt;</em></div>
+<div class="fsdocs-tip" id="fs10">val hello3: foo: Say.Foo -&gt; Async&lt;unit&gt;</div>
+<div class="fsdocs-tip" id="fs11">Multiple items<br />type Async =
+  static member AsBeginEnd: computation: (&#39;Arg -&gt; Async&lt;&#39;T&gt;) -&gt; (&#39;Arg * AsyncCallback * obj -&gt; IAsyncResult) * (IAsyncResult -&gt; &#39;T) * (IAsyncResult -&gt; unit)
+  static member AwaitEvent: event: IEvent&lt;&#39;Del,&#39;T&gt; * ?cancelAction: (unit -&gt; unit) -&gt; Async&lt;&#39;T&gt; (requires delegate and &#39;Del :&gt; Delegate)
+  static member AwaitIAsyncResult: iar: IAsyncResult * ?millisecondsTimeout: int -&gt; Async&lt;bool&gt;
+  static member AwaitTask: task: Task&lt;&#39;T&gt; -&gt; Async&lt;&#39;T&gt; + 1 overload
+  static member AwaitWaitHandle: waitHandle: WaitHandle * ?millisecondsTimeout: int -&gt; Async&lt;bool&gt;
+  static member CancelDefaultToken: unit -&gt; unit
+  static member Catch: computation: Async&lt;&#39;T&gt; -&gt; Async&lt;Choice&lt;&#39;T,exn&gt;&gt;
+  static member Choice: computations: seq&lt;Async&lt;&#39;T option&gt;&gt; -&gt; Async&lt;&#39;T option&gt;
+  static member FromBeginEnd: beginAction: (AsyncCallback * obj -&gt; IAsyncResult) * endAction: (IAsyncResult -&gt; &#39;T) * ?cancelAction: (unit -&gt; unit) -&gt; Async&lt;&#39;T&gt; + 3 overloads
+  static member FromContinuations: callback: ((&#39;T -&gt; unit) * (exn -&gt; unit) * (OperationCanceledException -&gt; unit) -&gt; unit) -&gt; Async&lt;&#39;T&gt;
+  ...<br /><br />--------------------<br />type Async&lt;&#39;T&gt;</div>
+<div class="fsdocs-tip" id="fs12">static member Async.RunSynchronously: computation: Async&lt;&#39;T&gt; * ?timeout: int * ?cancellationToken: Threading.CancellationToken -&gt; &#39;T</div>
 
     </div>
 

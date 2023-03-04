@@ -32,6 +32,10 @@ module Say =
         printfn "Hello %s" foo.Name
     }
 
+    let hello3 (foo : Project1.Say.Foo) = async {
+        printfn "Hello %s" foo.Name
+    }
+
         
 
     /// <summary>Testing 2</summary>

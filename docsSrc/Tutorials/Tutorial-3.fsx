@@ -1,7 +1,7 @@
 (**
 ---
 title: A Literate Script
-category: Examples
+category: Tutorials
 categoryindex: 2
 index: 1
 ---
@@ -11,10 +11,14 @@ index: 1
 
 *)
 
-#r "nuget: FsToolkit.Errorhandling"
-open FsToolkit.ErrorHandling
+#r "nuget: Project1"
+open Project1
+open System
 
-let test : Result<string,string> = result { return "foo"}
+#r "nuget: Project23"
+open Project2
 
-printf "A result is: %A" test
+let person = Say.Foo.Create ("Person",DateTime.Now)
+
+Say.hello3 person |> Async.RunSynchronously
 (*** include-output ***)

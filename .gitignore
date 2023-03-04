@@ -171,6 +171,9 @@ csx/
 ecf/
 rcf/
 
+tmp/
+temp/
+
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
