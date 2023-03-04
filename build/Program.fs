@@ -59,7 +59,7 @@ let initTargets () =
             "fsdocs-readme-link", quoted (READMElink.ToString())
             "fsdocs-release-notes-link", quoted (CHANGELOGlink.ToString())
           ]
-        
+        Strict = Some true
     }
 
   Target.create "CleanDocsCache" (fun  _ ->

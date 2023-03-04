@@ -31,7 +31,7 @@ The folders in `docsSrc` are:
 
 - `content` - custom css, javascript, and similar go here.
 - `Explanations` - A content section as defined above.
-- `files` - extra files like screenshots, images, videos.
+- `img` - extra files like screenshots, images, videos.
 - `How-To-Guides` - A content section as defined above.
 - `Tutorials` - A content section as defined above.
 - `index.md` - The entry page to your documentation
