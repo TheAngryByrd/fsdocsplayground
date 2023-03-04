@@ -36,10 +36,12 @@ let initTargets () =
     let srcProjGlob = String.Join(" ", srcProjGlob |> Seq.map quoted)
     Fsdocs.build (fun p -> {
       p with
+      
         Clean = Some true
         Input = Some docsSrc
         Output = Some docs
-        // Projects = Some [srcProjGlob]
+        Projects = Some [srcProjGlob]
+        Properties = Some ($"Version={version} PackageVersion={version}")
         Parameters = Some [
             // https://fsprojects.github.io/FSharp.Formatting/content.html#Templates-and-Substitutions
             "root", quoted docsPublicRoot
@@ -48,6 +50,7 @@ let initTargets () =
             "fsdocs-package-version", quoted version
             "fsdocs-readme-link", quoted (READMElink.ToString())
           ]
+        
     })
   )
 

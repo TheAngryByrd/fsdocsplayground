@@ -1,11 +1,21 @@
 /* CSS for Bootstrap 5 Fixed Left Sidebar Navigation */
 
-@media(min-width:1600px) {
+
+
+@media (min-width: 992px){
 
     body {
         padding-left: 300px;
         padding-right: 60px;
     }
+
+    #fsdocs-logo {
+        width:140px;
+        height:140px;
+        margin:10px 0px 0px 0px;
+        border-style:none;
+    }
+    
 
     nav.navbar {
         position: fixed;
@@ -68,4 +78,14 @@
     nav.navbar .dropdown-toggle:not(#bd-theme)::after  {
         display: none;
     } 
+
+    .dropdown-menu[data-bs-popper] {
+        top: auto;
+        left: auto;
+        margin-top: auto;
+    }
+
+    .nav-link:focus, .nav-link:hover {
+        color: auto;
+    }
 }
