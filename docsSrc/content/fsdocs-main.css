@@ -347,7 +347,7 @@ blockquote {
 }
 
 #fsdocs-content table.pre {
-    background-color: #fff7ed;
+    background-color: var(--fsdocs-table-pre-background-color);;
 }
 
 #fsdocs-content table.pre pre {
