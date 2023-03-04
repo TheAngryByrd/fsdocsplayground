@@ -23,6 +23,7 @@ let docsPublicRoot = "https://www.jimmybyrd.me/fsdocsplayground/"
 let projectName = "FsDocs Playground"
 let githubProjectRootUrl = Uri("https://github.com/TheAngryByrd/fsdocsplayground/")
 let READMElink = Uri(githubProjectRootUrl, $"blob/{defaultBranch}/README.md")
+let CHANGELOGlink = Uri(githubProjectRootUrl, $"blob/{defaultBranch}/CHANGELOG.md")
 
 let quoted s = $"\"%s{s}\""
 
@@ -42,7 +43,6 @@ let initTargets () =
 
   let fsDocsBuildParams (p : Fsdocs.BuildCommandParams) =
     { p with
-        // FscOptions = Some (quoted @" --compilertool:C:\Users\jimmy\.nuget\packages\depman-fsproj\0.2.4\tools\net6.0\any")
         Clean = Some true
         Input = Some (quoted docsSrc)
         Output = Some (quoted docs)
@@ -57,6 +57,7 @@ let initTargets () =
             "fsdocs-repository-link", quoted(githubProjectRootUrl.ToString())
             "fsdocs-package-version", quoted version
             "fsdocs-readme-link", quoted (READMElink.ToString())
+            "fsdocs-release-notes-link", quoted (CHANGELOGlink.ToString())
           ]
         
     }
